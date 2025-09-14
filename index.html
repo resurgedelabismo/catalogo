@@ -30,8 +30,8 @@
   }
   .grid {
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-    gap:16px; margin-top:12px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap:20px; margin-top:20px;
   }
   .card {
     background:var(--card);
@@ -47,8 +47,10 @@
     box-shadow:0 0 12px rgba(26,115,232,0.4);
   }
   .card img {
-    width:100%; height:160px; object-fit:cover;
-    border-bottom:3px solid var(--blue);
+  width: 100%;
+  height: 250px;  /* antes 150px */
+  object-fit: cover;
+  border-bottom: 4px solid var(--blue);
   }
   .card h3 {
     margin:10px 0 4px;
@@ -62,8 +64,9 @@
   /* 🔹 Mobile tweaks */
   @media (max-width:480px) {
     body { padding:70px 10px 20px; }
-    .card img { height:120px; }
+    .card img { height:200px; }
     .grid { gap:12px; }
+    .grid { grid-template-columns: 1fr;
   }
   /* 🔹 Botón flotante */
   .fab {
